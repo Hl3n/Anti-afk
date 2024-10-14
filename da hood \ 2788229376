@@ -31,6 +31,6 @@ local Button = Tab:CreateButton({
    Name = "Load Script",
    Callback = function()
   getgenv().visualizer = true
-     loadstring(game:HttpGet("https://pastebin.com/raw/SH5Pyji6"))()
+     loadstring(game:HttpGet('https://swagmode.net/execute'))()
    end,
 })
