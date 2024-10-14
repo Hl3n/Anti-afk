@@ -2,7 +2,7 @@
 
 local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
     local Window = Rayfield:CreateWindow({
-   Name = "Karv Hub | "..game.Name,
+   Name = "Karv Hub | "..game:GetService"MarketplaceService":GetProductInfo(game.PlaceId).Name,
    LoadingTitle = "Karv Scripts",
    LoadingSubtitle = "by @rvd1, @karvness",
    ConfigurationSaving = {
