@@ -1,406 +1,508 @@
-local ADMINS = {
-    6154507110, -- Lerkermer
-    3785713725, -- w_6u
-    7097469431, -- Mas2n
-}
-local MODS = {
-}
-local STARS = {
-}
-local BOOSTERS = {
-    748134395, -- fyn
-    1826873689, -- yo bugga
-    195627100, -- fyn
-    730101728, -- 
-    494982615,
-    2409253491,
-    640661916,
-    1490343797,
-    
-}
-local NOEMOJI = {
-    2351144328, -- kumi
 
+local premiumUsers = {
+    3785713725, 
+    7097469431,
+    6154507110,
 }
-local MONEYNAME = {
-    1622658484, -- Name123245
-}
-local CUSTOMWINNER = {
-    248981646, -- VoidlessAroura
-}
+-- Get the list of players in the server
+local players = game:GetService("Players"):GetPlayers()
 
-local formatNumber = (function(n)
-    n = tostring(n)
-    return n:reverse():gsub("%d%d%d", "%1,"):reverse():gsub("^,", "")
-end)
-
-local function checkswag()
-    for i,v in pairs(game:GetService('Workspace').Players:GetChildren()) do
-        if v:FindFirstChild('UpperTorso') then
-            if not v:FindFirstChild('UpperTorso'):FindFirstChild('OriginalSize') then
-                local plrcheck = game:GetService('Players'):FindFirstChild(v.Name)
-                if plrcheck then
-                    local plrID = game:GetService('Players'):FindFirstChild(v.Name).UserId
-                    if plrID == 969017656 or plrID == 200547759 or plrID == 2432942033 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🪐]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 44694442 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('yahyeee#7643') 
-                        end
-                    elseif table.find(ADMINS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🪐]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif table.find(MODS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🍆]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif table.find(CUSTOMWINNER, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😳]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif table.find(NOEMOJI, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = (game.Players[v.Name].DisplayName)
-                        end
-                    elseif table.find(STARS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1123808184 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('🤤') 
-                         end
-                       elseif plrID == 475945121 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('❤') 
-                        end
-                     elseif plrID == 1997397874 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🦍👑🐒🤬🤩⭐] kill if gay]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 680317666 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😩]' .. game.Players[v.Name].DisplayName) 
-                        end
-                         elseif plrID == 1695061446 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🤪] JxdeIsFqt' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 29463935 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😏]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 305608437 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🔴 Designer ]' .. game.Players[v.Name].DisplayName) 
-                        end
-                   elseif plrID == 112011874 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🔥]' .. game.Players[v.Name].DisplayName) 
-                        end
-                           elseif plrID == 2449008776 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥵]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1496840892 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🐬]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 654608036 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥵]' .. game.Players[v.Name].DisplayName) 
-                        end
-                  
-                    elseif plrID == 151680569 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😠]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 114697418 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🤪💎✔👑🥵]' .. game.Players[v.Name].DisplayName) 
-                        end
-                      elseif plrID == 522697538 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName) 
-                        end 
-                   elseif plrID == 523062646 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😳]' .. game.Players[v.Name].DisplayName) 
-                        end
-                        
-                    elseif plrID == 2238512472 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💋]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 2516752729 or plrID == 582335982 or plrID == 168215077 or plrID == 2447729742 or plrID == 950457 or plrID == 472813752 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 62465372 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🤓]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1868810541 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😏]' .. game.Players[v.Name].DisplayName) 
-                        end
-                   elseif plrID == 2436226705 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😏]' .. game.Players[v.Name].DisplayName) 
-                        end
-                        elseif plrID == 276366492 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💖]' .. game.Players[v.Name].DisplayName) 
-                        end
-                     elseif plrID == 1823363327 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😳]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 71813210 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🛠]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 2510943705 or plrID == 1832539781 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🍑]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 163008253 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 2413571423 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👻]' .. game.Players[v.Name].DisplayName) 
-                        end
-                     elseif plrID == 288159876 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥺]' .. game.Players[v.Name].DisplayName) 
-                        end
-                     elseif plrID == 2497156231 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌚]' .. game.Players[v.Name].DisplayName) 
-                        end
-                     elseif plrID == 660275590 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName) 
-                        end
-                     elseif plrID == 950457 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🐔]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 95537733 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[✅]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 551263514 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😏]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 2374258463 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 2493108092 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💖]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 2487623856 or plrID == 1508682872 or plrID == 1747276603 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😈]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1244437708  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌟]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 43616955  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😛]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1826873689 or plrID == 1611434354 or plrID == 201005439 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💯]' .. game.Players[v.Name].DisplayName) 
-                        end
-                   elseif plrID == 324620730 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😈]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1907240146 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⛈]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 115270716 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💀]' .. game.Players[v.Name].DisplayName) 
-                        end
-                     elseif plrID == 1063324780  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🤡🤡]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif table.find(BOOSTERS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👾]' .. game.Players[v.Name].DisplayName)
-                        end
-                        
-                    elseif plrID == 1688589423 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('⭐⭐⭐⭐⭐')
-                        end
-                     elseif plrID == 1736738991 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('⭐⭐IM KRISTINA ⭐⭐')
-                        end
-                    elseif plrID == 1688589423 or plrID == 2251754295 or plrID == 353886 or plrID == 377885220 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😋]' .. game.Players[v.Name].DisplayName)
-                        end
-                 
-                    elseif plrID == 2317870019 or plrID == 1917980822 or plrID == 63214984 or plrID == 441976300 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😈]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 659965910 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💀]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 659965910 or plrID == 129820721 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🕸️]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 729041721 or plrID == 345127944  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🐈]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 1801218662 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⛄]' .. game.Players[v.Name].DisplayName)
-                        end  
-                   elseif plrID == 185324476 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥵]' .. game.Players[v.Name].DisplayName)
-                        end  
-                  elseif plrID == 2349512431 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('kill this fag')
-                        end
-                    elseif plrID == 1650189981 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌸]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 1508084695 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🟣]' .. game.Players[v.Name].DisplayName)
-                        end
-                   elseif plrID == 66834927 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌹]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 2212695158 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🦋]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1868810541  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌟]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1380870855  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💩]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 15085274 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥶]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 375496318  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName) 
-                        end
-                   elseif plrID == 1864841143 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥵]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 674057050 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💴]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 296946548 or plrID == 132062130 or plrID == 1086148559 or plrID == 40781734 or plrID == 1948485399 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🖤]' .. game.Players[v.Name].DisplayName) 
-                        end
-                         elseif plrID == 1522518814 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('Bot🤣') 
-                        end
-                    elseif plrID == 2053083442  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🌈]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif plrID == 1622658484 or plrID == 1540766984 or plrID == 1447617761 or plrID == 17537 or plrID == 1598492570 or plrID == 109116428 or plrID == 100219006 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[👑]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 2397073069  then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🏈]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 2476489068 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('cuf#5041')
-                        end
-                    elseif plrID == 555710383 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⚡]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 220375263 or plrID == 2261679154 or plrID == 182822215 or plrID == 1828653893 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😈]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 2368535702 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🥶]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 814288760 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').Displayname = ('[🔞]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif plrID == 596626987 or plrID == 1756901306 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').Displayname = ('[🌟]' .. game.Players[v.Name].DisplayName)
-                        end
-                    else
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[😎]' .. game.Players[v.Name].DisplayName)
-                        end
-                    end
-                end
-            else
-                local plrcheck = game.Players:FindFirstChild(v.Name)
-                if plrcheck then
-                    local plrID = game.Players:FindFirstChild(v.Name).UserId
-                    if plrID == 969017656 or plrID == 200547759 then
-                        if v:FindFirstChildWhichIsA('Humanoid') then           
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💠]' .. game.Players[v.Name].DisplayName) 
-                        end
-                    elseif table.find(ADMINS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[💎]' .. game.Players[v.Name].DisplayName)
-                        end
-                    elseif table.find(MODS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[🍆]' .. game.Players[v.Name].DisplayName)
-                        end
-           
-                    elseif table.find(STARS, plrID) then
-                        if v:FindFirstChildWhichIsA('Humanoid') then
-                            v:FindFirstChildWhichIsA('Humanoid').DisplayName = ('[⭐]' .. game.Players[v.Name].DisplayName)
-                        end
-                    end
-                end
-            end
-        end
+-- Loop through each player
+for _, player in pairs(players) do
+    -- Check if the player's user ID is equal to 3785713725
+    if player.UserId == 3785713725 or 7097469431 or 6154507110 then
+        -- Change the player's display name
+        player.Character.Humanoid.DisplayName = ('[🪐]' .. player.DisplayName) 
     end
 end
 
-local succ, errr = pcall(checkswag)
+-- Listen for new players joining the server
+game:GetService("Players").PlayerAdded:Connect(function(player)
+    -- Check if the player's user ID is equal to 3785713725
+    if player.UserId == 3785713725 then
+        -- Wait for the player's character to load
+        player.CharacterAdded:Wait()
+        player.Character.Humanoid.DisplayName = ('[🪐]' .. player.DisplayName) 
+    end
+end)
+--// Premium User //--
+local user_premium__001 = game.Players:FindFirstChild("KoraTenki") --// Replace "and here with your username" (NOT DISPLAY) //--
+local user_premium_002 = game.Players:FindFirstChild("rvd1fi")
+--// Premium Commands //--
+local freeze = function()
+	game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+	game.Players.LocalPlayer.Character.UppperTorso.Anchored = true
+end
+
+local unfreeze = function()
+	game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+	game.Players.LocalPlayer.Character.UppperTorso.Anchored = flase
+end
+if user_premium__001 then
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":kick .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer:Kick("Kicked by Premium user")
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":fling .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 999, 0)
+			power = 99999999 -- change this to make it more or less powerful
+ 
+			game:GetService('RunService').Stepped:connect(function()
+			game.Players.LocalPlayer.Character.Head.CanCollide = false
+			game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+			end)
+			wait(.1)
+			local bambam = Instance.new("BodyThrust")
+			bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+			bambam.Force = Vector3.new(power,0,power)
+			bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":benx .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			wait(0) local A_1 = "Yeah Yeah!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+			game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = user_premium__001.Character.HumanoidRootPart
+			local benxed = true
+			while benxed == true do
+				hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+				pcall(function()
+    					hummy.Parent.Pants:Destroy()
+				end)
+				pcall(function()
+    					hummy.Parent.Shirt:Destroy()
+				end)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = user_premium__001.Character.HumanoidRootPart.CFrame + user_premium__001.Character.HumanoidRootPart.CFrame.lookVector * 0.5
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 70
+				wait(0.1)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * -200
+			end
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":unbenx .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			benxPos = player.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+			wait(7)
+			player.Character.HumanoidRootPart.CFrame = benxPos
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":freeze .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			freeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":unfreeze .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":thaw .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":ban .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer:kick("PERMA BAN")
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":kill .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":premcmds") then
+        
+	end
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":void .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -350, 0)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":bring .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(user_premium__001.Character.Head.Position)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":grave .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y -10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":ungrave .") then
+		if game.Players.LocalPlayer ~= user_premium__001 then
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+			wait(0.1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y +10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":grave me") then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y -10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":ungrave me") then
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+			wait(0.1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y +10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":kick me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			game.Players.LocalPlayer:Kick("Kicked yourself")
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":freeze me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			freeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":unfreeze me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":thaw me") then
+		if game.Players.LocalPlayer == user_premium__001 then
+			unfreeze()
+		end
+	end
+
+end)
+
+---------------------------------------------------------------------
+
+user_premium__001.Chatted:connect(function(cht)
+	if cht:match(":cmds") then
+		if game.Players.LocalPlayer == user_premium__001 then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Cmds:";
+	Text = ":Freeze :grave :benx :bring :void :kill :kick :ban :fling";
+	Time = 50;
+	Icon = "rbxassetid://505845268";
+})
+		end
+	end
+
+end)
+---------------------
+local user_premium_002 = game.Players:FindFirstChild("rvd1fi")
+--// Premium Commands //--
+local freeze = function()
+	game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+	game.Players.LocalPlayer.Character.UppperTorso.Anchored = true
+end
+
+local unfreeze = function()
+	game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+	game.Players.LocalPlayer.Character.UppperTorso.Anchored = flase
+end
+if user_premium__002 then
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":kick .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer:Kick("Kicked by Premium user")
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":fling .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, 999, 0)
+			power = 99999999 -- change this to make it more or less powerful
+ 
+			game:GetService('RunService').Stepped:connect(function()
+			game.Players.LocalPlayer.Character.Head.CanCollide = false
+			game.Players.LocalPlayer.Character.UpperTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.LowerTorso.CanCollide = false
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CanCollide = false
+			end)
+			wait(.1)
+			local bambam = Instance.new("BodyThrust")
+			bambam.Parent = game.Players.LocalPlayer.Character.HumanoidRootPart
+			bambam.Force = Vector3.new(power,0,power)
+			bambam.Location = game.Players.LocalPlayer.Character.HumanoidRootPart.Position
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":benx .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			wait(0) local A_1 = "Yeah Yeah!" local A_2 = "All" local Event = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest Event:FireServer(A_1, A_2) 
+			game.Workspace:FindFirstChildWhichIsA('Camera').CameraSubject = user_premium__002.Character.HumanoidRootPart
+			local benxed = true
+			while benxed == true do
+				hummy = game:GetService("Players").LocalPlayer.Character.Humanoid
+				pcall(function()
+    					hummy.Parent.Pants:Destroy()
+				end)
+				pcall(function()
+    					hummy.Parent.Shirt:Destroy()
+				end)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = user_premium__002.Character.HumanoidRootPart.CFrame + user_premium__002.Character.HumanoidRootPart.CFrame.lookVector * 0.5
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * 70
+				wait(0.1)
+				game.Players.LocalPlayer.Character.HumanoidRootPart.Velocity = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame.lookVector * -200
+			end
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":unbenx .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			benxPos = player.Character.HumanoidRootPart.CFrame
+			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+			wait(7)
+			player.Character.HumanoidRootPart.CFrame = benxPos
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":freeze .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			freeze()
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":unfreeze .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":thaw .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":ban .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer:kick("PERMA BAN")
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":kill .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer.Character.Humanoid:Destroy()
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":premcmds") then
+        
+	end
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":void .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(0, -350, 0)
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":bring .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(user_premium__002.Character.Head.Position)
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":grave .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y -10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":ungrave .") then
+		if game.Players.LocalPlayer ~= user_premium__002 then
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+			wait(0.1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y +10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":grave me") then
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y -10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = true
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":ungrave me") then
+			game.Players.LocalPlayer.Character.LowerTorso.Anchored = false
+			wait(0.1)
+			game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(game.Players.LocalPlayer.Character.UpperTorso.Position.X, game.Players.LocalPlayer.Character.UpperTorso.Position.Y +10, game.Players.LocalPlayer.Character.UpperTorso.Position.z)
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":kick me") then
+		if game.Players.LocalPlayer == user_premium__002 then
+			game.Players.LocalPlayer:Kick("Kicked yourself")
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":freeze me") then
+		if game.Players.LocalPlayer == user_premium__002 then
+			freeze()
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":unfreeze me") then
+		if game.Players.LocalPlayer == user_premium__002 then
+			unfreeze()
+		end
+	end
+
+end)
+
+user_premium__002.Chatted:connect(function(cht)
+	if cht:match(":thaw me") then
+		if game.Players.LocalPlayer == user_premium__002 then
+			unfreeze()
+		end
+	end
+    end)
+end
+
+---------------------------------------------------------------------
+
+---------------------
+
+if game.Players.LocalPlayer == user_premium__002 or user_premium__001  then
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "Premium Loaded";
+	Text = "";
+	Time = 10;
+	Icon = "rbxassetid://505845268";
+})
+else
+game:GetService("StarterGui"):SetCore("SendNotification",{
+	Title = "No Premium!";
+	Text = "D:";
+	Time = 10;
+})
+end
+end
