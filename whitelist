@@ -10,7 +10,7 @@ local players = game:GetService("Players"):GetPlayers()
 -- Loop through each player
 for _, player in pairs(players) do
     -- Check if the player's user ID is equal to 3785713725
-    if player.UserId == 3785713725 or 7097469431 or 6154507110 then
+    if player.UserId == 3785713725 or player.UserId == 7097469431 or player.UserId == 6154507110 then
         -- Change the player's display name
         player.Character.Humanoid.DisplayName = ('[🪐]' .. player.DisplayName) 
     end
@@ -19,7 +19,7 @@ end
 -- Listen for new players joining the server
 game:GetService("Players").PlayerAdded:Connect(function(player)
     -- Check if the player's user ID is equal to 3785713725
-    if player.UserId == 3785713725 then
+    if player.UserId == 3785713725 or player.UserId == 7097469431 or player.UserId == 6154507110 then
         -- Wait for the player's character to load
         player.CharacterAdded:Wait()
         player.Character.Humanoid.DisplayName = ('[🪐]' .. player.DisplayName) 
