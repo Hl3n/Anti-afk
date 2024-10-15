@@ -1,4 +1,4 @@
-game.Players.LocalPlayer:Kick("PERMA")
+
 local premiumUsers = {
     3785713725, 
     7097469431,
