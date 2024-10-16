@@ -1,0 +1,72 @@
+local KeyGuardLibrary = loadstring(game:HttpGet("https://cdn.keyguardian.org/library/v1.0.0.lua"))()
+local trueData = "52bfc7bbfd24423f8d59ba645620ac48"
+local falseData = "42e2fde128e74d33a86944b8c2b2ddf5"
+function notify(title,text,time)
+    game.StarterGui:SetCore("SendNotification", {
+        Title = title;
+        Text = text;
+        Duration = time;
+    })
+end
+KeyGuardLibrary.Set({
+  publicToken = "ad70b302589f40139f837e99b1765c99",
+  privateToken = "7ba1db6677c74b59866a2d69b3e4a09a",
+  trueData = trueData,
+  falseData = falseData,
+})
+
+local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local key = ""
+
+local Window = Fluent:CreateWindow({
+    Title = "Key System",
+    SubTitle = "Karv Hub",
+    TabWidth = 160,
+    Size = UDim2.fromOffset(580, 340),
+    Acrylic = false,
+    Theme = "Dark",
+    MinimizeKey = Enum.KeyCode.LeftControl
+})
+
+local Tabs = {
+    KeySys = Window:AddTab({ Title = "Key System", Icon = "key" }),
+}
+
+local Entkey = Tabs.KeySys:AddInput("Input", {
+    Title = "Enter Key",
+    Description = "Enter Key Here",
+    Default = "",
+    Placeholder = "Enter key…",
+    Numeric = false,
+    Finished = false,
+    Callback = function(Value)
+        key = Value
+    end
+})
+
+local Checkkey = Tabs.KeySys:AddButton({
+    Title = "Check Key",
+    Description = "Enter Key before pressing this button",
+    Callback = function()
+        local response = KeyGuardLibrary.validateDefaultKey(key)
+        if response == trueData then
+           print("Key is valid")
+           notify('.gg/karv', 'Valid Key!', 30)
+           loadstring(game:HttpGet("https://raw.githubusercontent.com/Hl3n/karvxhub/refs/heads/main/KARVBETA"))()
+        else
+            notify('.gg/karv', 'Invalid Key', 30)
+           print("Key is invalid")
+        end
+    end
+})
+
+local Getkey = Tabs.KeySys:AddButton({
+    Title = "Get Key",
+    Description = "Get Key here",
+    Callback = function()
+        notify('.gg/karv', 'Copied key link to clipboard!', 30)
+       setclipboard(KeyGuardLibrary.getLink())
+    end
+})
+
+Window:SelectTab(1)
