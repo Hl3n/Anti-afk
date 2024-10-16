@@ -1,0 +1,13 @@
+
+local BlackList = {
+    { userID = 4, reason = "Bypassing Key System"},
+}
+
+local localPlayer = game.Players.LocalPlayer
+local localUserID = localPlayer.UserId
+for _, entry in pairs(BlackList) do
+    if entry.userID == localUserID then
+        localPlayer:Kick(entry.reason)
+        break
+    end
+end
